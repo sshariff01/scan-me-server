@@ -1,0 +1,26 @@
+<h1>Input your Contact Information</h1>
+
+
+<%= form_with scope: :user, url: registration_index_path, local: true do |form| %>
+    <table>
+      <tr>
+        <td><%= form.label(:first_name, 'First Name:') %></td>
+        <td><%= form.text_field(:first_name) %></td>
+      </tr>
+      <tr>
+        <td><%= form.label(:last_name, 'Last Name:') %></td>
+        <td><%= form.text_field(:last_name) %></td>
+      </tr>
+      <tr>
+        <td><%= form.label(:email, 'Email:') %></td>
+        <td><%= form.text_field(:email) %></td>
+      </tr>
+      <tr>
+        <td><%= form.label(:phone_number, 'Phone Number:') %></td>
+        <td><%= form.text_field(:phone_number) %></td>
+      </tr>
+    </table>
+
+    <br/>
+    <%= submit_tag('Display My Scanner Code') %>
+<% end %>
