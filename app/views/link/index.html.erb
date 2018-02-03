@@ -1,0 +1,8 @@
+<h1>Display links here</h1>
+
+<% @links.each do |link| %>
+    <% if link[:url].present? %>
+      <a href=<%= link[:url] %> class="button"><%= link[:platform] %></a>
+      <br />
+    <% end %>
+<% end %>
