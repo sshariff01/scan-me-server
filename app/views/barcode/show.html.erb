@@ -1,0 +1,9 @@
+<h1>Scan Me!</h1>
+
+<% if @qr_code.present? %>
+    <img src="data:image/png;base64,<%= @qr_code %>" />
+<% else %>
+    <%= link_to new_link_path(:id => @user.id), :class => 'btn btn-small' do %>
+      Update Your Social Media Information
+    <% end %>
+<% end %>

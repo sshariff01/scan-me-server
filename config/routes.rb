@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :registration, only: [:new, :create]
+  resources :registration, only: [:create, :new]
 
-  get 'link/index'
+  resources :link, only: [:create, :new, :show]
 
-  get 'barcode/index'
+  resources :barcode, only: [:show]
 
-  root 'barcode#index'
+  root 'barcode#show'
 end

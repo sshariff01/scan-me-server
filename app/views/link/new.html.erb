@@ -1,0 +1,22 @@
+<h1>Update Your Social Media Information</h1>
+
+<%= form_with scope: :social_media_link,  url: link_index_path, local: true do |form| %>
+    <table>
+      <%= form.hidden_field :user_id, :value => @user_id %>
+      <tr>
+        <td><%= form.label(:facebook_url, 'Facebook URL:') %></td>
+        <td><%= form.text_field(:facebook_url) %></td>
+      </tr>
+      <tr>
+        <td><%= form.label(:instagram_url, 'Instagram URL:') %></td>
+        <td><%= form.text_field(:instagram_url) %></td>
+      </tr>
+      <tr>
+        <td><%= form.label(:twitter_url, 'Twitter URL:') %></td>
+        <td><%= form.text_field(:twitter_url) %></td>
+      </tr>
+    </table>
+
+    <br/>
+    <%= submit_tag('Update') %>
+<% end %>
